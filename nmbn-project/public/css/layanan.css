@@ -1,0 +1,170 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+main {
+    position: relative;
+    width: calc(min(90rem, 90%));
+    margin: 0 auto; /* Memperbaiki kesalahan penulisan koma */
+    min-height: 100vh;
+    column-gap: 3rem;
+    padding-block: min(20vh, 3rem);
+}
+
+main > div span {
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    font-size: 1rem;
+    color: #717171;
+}
+
+main > div h1 {
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+    font-family: "Poppins", sans-serif;
+    font-weight: 900;
+    font-size: clamp(3.4375rem, 3.25rem + 0.74vw, 4rem);
+    background-color: aqua;
+    background-image: linear-gradient(45deg, #005baa, #0000);
+    background-size: 100%;
+    background-repeat: repeat;
+    -webkit-background-clip: text; /* Tambahkan prefix -webkit- untuk kompatibilitas */
+    -webkit-text-fill-color: transparent; /* Tambahkan prefix -webkit- untuk kompatibilitas */
+}
+
+main > div hr {
+    display: block;
+    background-color: #005baa;
+    height: 0.25rem;
+    width: 300px;
+    border: none;
+    margin: 1.125rem 0 1.875rem 0;
+}
+
+main > div p {
+    line-height: 1.6;
+}
+
+main a {
+    display: inline-block;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #717171;
+    font-weight: 500;
+    background-color: #fff;
+    border-radius: 3.125rem;
+}
+
+main > div > a {
+    border: 2px solid #005baa;
+    margin-top: 2.188rem;
+    padding: 0.625rem 1.875rem;
+}
+
+main > div > a:hover {
+    border: 0.125rem solid #005baa;
+    color: #005baa;
+}
+
+.swiper {
+    width: 100%;
+    padding-top: 3.125rem;
+}
+
+.swiper-slide {
+    width: 480px;
+    height: 570px;
+    display: flex;
+    flex-direction: column; /* Mengubah flex-direction dari row ke column */
+    justify-content: flex-end; /* Mengubah justify-content menjadi flex-end */
+    align-items: flex-start; /* Mengubah align-items menjadi flex-start */
+    border-radius: 20px;
+    overflow: hidden; /* Menambahkan overflow: hidden untuk memotong konten yang melebihi slide */
+    position: relative; /* Menambahkan position: relative agar posisi elemen lain di dalam slide terkait dengan slide tersebut */
+}
+
+.swiper-slide h2 {
+    color: #fff;
+    font-family: "Poppins", sans-serif;
+    font-size: 1.4rem;
+    line-height: 1.4;
+    margin-bottom: 0.625rem;
+    padding: 0 0 0 1.563rem;
+    text-transform: uppercase;
+}
+
+.swiper-slide p {
+    color: #dadada;
+    font-family: "Poppins", sans-serif;
+    font-weight: 300;
+    padding: 0 1.563rem;
+    line-height: 1.6;
+    font-size: 0.75rem;
+}
+
+.swiper-slide a {
+    margin: 1.25rem 1.563rem 3.438rem 1.563rem;
+    padding: 0.438rem 1.875rem;
+    font-size: 0.9rem;
+}
+
+.swiper-slide a:hover {
+    color: #005baa;
+}
+
+/* image slide */
+
+.slide-1 {
+    background-image: url("../gambar/service/1.jpg");
+    background-size: contain;
+}
+
+.slide-2 {
+    background-image: url("../gambar/service/2.jpg");
+    background-size: contain;
+}
+
+.slide-3 {
+    background-image: url("../gambar/service/3.jpg");
+    background-size: contain;
+}
+
+/* pagination */
+
+.paginate {
+    display: inline-flex;
+    justify-content: center;
+    margin-top: 50px;
+}
+
+/* swipper buttons */
+
+.swiper-buttons .swiper-button-prev {
+    background-color: transparent;
+    border: none;
+    color: violet;
+}
+
+.swiper-buttons .swiper-button-next {
+    background-color: transparent;
+    border: none;
+    color: violet;
+}
+
+/* responsive */
+
+@media screen and (min-width: 48rem) {
+    main {
+        display: flex;
+        align-items: center;
+    }
+}
+
+@media screen and (min-width: 93.75rem) {
+    .swiper {
+        width: 85%;
+    }
+}
